@@ -1,0 +1,301 @@
+main {
+  min-width: 290px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.products {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  background-color: $white;
+  border: 1px solid $basic-grey;
+  &__header {
+    position: relative;
+    min-height: 50px;
+    background-color: $basic-grey;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__menu {
+    width: 38%;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    background-color: $basic-grey;
+    z-index: 100;
+    @include for-tablet-portrait-up {
+      width: 25%;
+    }
+    &--hidden {
+      width: 7%;
+      height: 100%;
+    }
+  }
+  &__nav {
+    background-color: $basic-grey;
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+  &__menu-title {
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 15px;
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+  &__nav-list {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  &__nav-link {
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    &:hover {
+      font-weight: 600;
+    }
+  }
+  &__nav-list-more {
+    display: none;
+    position: absolute;
+    min-width: 120%;
+    bottom: 0;
+    left: 100%;
+    background-color: $basic-grey;
+    .products__nav-item:hover > & {
+      display: block;
+    }
+    a {
+      display: block;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+  &__view {
+    display: block;
+    width: 7%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  &__wrap {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  &__list {
+    @include list-to-flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding-bottom: 30px;
+  }
+  &__table {
+    width: 100%;
+    margin-top: 30px;
+    thead {
+      background: $basic-grey;
+    }
+    tr:not(:last-child) {
+      border-bottom: 1px solid $grey;
+    }
+  }
+  &__option {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    &--name {
+      display: table-cell;
+    }
+    &--type {
+      @include for-tablet-portrait-up {
+        display: table-cell;
+      }
+    }
+    &--power {
+      @include for-tablet-portrait-up {
+        display: table-cell;
+      }
+    }
+    &--price {
+      display: table-cell;
+    }
+    @include for-tablet-landscape-up {
+      display: table-cell;
+    }
+  }
+}
+
+.product {
+  min-width: 220px;
+  box-sizing: border-box;
+  width: 70%;
+  border: 1px solid $basic-grey;
+  padding: 15px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: $font-size-base + .3;
+  @include for-tablet-portrait-up {
+    width: 48%;
+    font-size: $font-size-base + .2;
+  }
+  @include for-tablet-landscape-up {
+    width: 32%;
+    font-size: $font-size-base + .1;
+  }
+  @include for-desktop-up {
+    width: 24%;
+    font-size: $font-size-base;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+    &--table {
+      width: 25%;
+      border: 1px solid $basic-grey;
+      margin-right: 10px;
+      margin-bottom: 0;
+      padding: 5px;
+      @include for-tablet-landscape-up {
+        float: left;
+      }
+    }
+  }
+  &__name {
+    display: block;
+    color: $mint;
+    margin-top: 5px;
+    font-size: $font-size-base + .5;
+    &:hover {
+      color: transparentize($mint, .3);
+    }
+    @include for-tablet-portrait-up {
+      font-size: $font-size-base + .4;
+    }
+    @include for-tablet-landscape-up {
+      font-size: $font-size-base + .3;
+    }
+    @include for-desktop-up {
+      font-size: $font-size-base + .2;
+    }
+  }
+  &__price-cont {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include for-tablet-portrait-up {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    &--request {
+      display: block;
+      position: relative;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  &__btn {
+    border: 1px solid $red;
+    color: $red;
+    background: $white;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
+    &--buy {
+      width: 70%;
+      margin-top: 10px;
+      @include for-tablet-portrait-up {
+        width: 48%;
+      }
+    }
+    &--request {
+      @include visually-hidden;
+      width: 100%;
+      left: 0;
+      top: 0;
+      .product__price-cont--request:hover > & {
+        clip: auto;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+  &__price {
+    text-align: center;
+    font-size: $font-size-base + .5;
+    @include for-tablet-portrait-up {
+      font-size: $font-size-base + .4;
+    }
+    @include for-tablet-landscape-up {
+      font-size: $font-size-base + .3;
+    }
+    @include for-desktop-up {
+      font-size: $font-size-base + .2;
+    }
+    &--table {
+      width: 100%;
+      font-weight: bold;
+      @include for-tablet-portrait-up {
+        width: 100%;
+      }
+    }
+  }
+  &__table-cell {
+    display: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    @include for-tablet-landscape-up {
+      display: table-cell;
+      text-align: center;
+    }
+    &--name {
+      display: table-cell;
+      text-align: left;
+      @include for-tablet-landscape-up {
+        width: 30%;
+      }
+    }
+    &--type {
+      @include for-tablet-portrait-up {
+        display: table-cell;
+      }
+    }
+    &--power {
+      @include for-tablet-portrait-up {
+        display: table-cell;
+      }
+    }
+    &--price {
+      display: table-cell;
+      min-width: 8rem;
+    }
+  }
+}
