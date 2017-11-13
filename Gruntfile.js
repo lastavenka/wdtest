@@ -14,6 +14,9 @@ module.exports = function(grunt) {
         files: {
           'build/index.html': ['source/index.pug']
         }
+      },
+      options: {
+        pretty: true
       }
     },
 
@@ -128,7 +131,8 @@ module.exports = function(grunt) {
         files: ['source/index.pug'],
         tasks: ['pug'],
         options: {
-          spawn: false
+          spawn: false,
+          pretty: true
         }
       }
     }
