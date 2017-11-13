@@ -8,125 +8,125 @@ html(lang="en")
       | Aptitude test for WeldingRussia
   body
 
-  main(role="main")
-    section.products
-      header.products__header
-        .products__menu.products__menu--hidden
-          h4.products__menu-title.products__menu-title--hidden Каталог оборудования
-          nav(class="products__nav products__nav--hidden")
-            ul.products__nav-list
-              li.products__nav-item
-                a(href="#", class="products__nav-link") 1 уровень
-                ul.products__nav-list-more
-                  li
-                    a(href="#") 2 уровень
-                    ul
-                      li
-                        a(href="#") 3 уровень
-                        ul
-                          li
-                            a(href="#") 4 уровень меню
-                          li
-                            a(href="#") 4 уровень меню
-              li.products__nav-item
-                a(href="#", class="products__nav-link") 1 уровень
-                ul.products__nav-list-more
-                  li
-                    a(href="#") 2 уровень
-                    ul
-                      li
-                        a(href="#") 3 уровень
-                      li
-                        a(href="#") 3 уровень
-                      li
-                        a(href="#") 3 уровень
-              li.products__nav-item
-                a(href="#", class="products__nav-link") 1 уровень
-                ul.products__nav-list-more
-                  li
-                    a(href="#") 2 уровень
-                    ul
-                      li
-                        a(href="#") 3 уровень
-                        ul
-                          li
-                            a(href="#") 4 уровень меню
-              li.products__nav-item
-                a(href="#", class="products__nav-link") 1 уровень
-                ul.products__nav-list-more
-                  li
-                    a(href="#") 2 уровень
-                    ul
-                      li
-                        a(href="#") 3 уровень
-                        ul
-                          li
-                            a(href="#") 4 уровень меню
-                          li
-                            a(href="#") 4 уровень меню
-                          li
-                            a(href="#") 4 уровень меню
-              li.products__nav-item
-                a(href="#", class="products__nav-link") 1 уровень
-                ul.products__nav-list-more
-                  li
-                    a(href="#") 2 уровень
-                  li
-                    a(href="#") 2 уровень
-                  li
-                    a(href="#") 2 уровень
-        i.products__view Change view
-      .products__wrap
-        - var productsList = [{name: "Болгарка Skil 9005 LA", img: 'skil9005la', descr: 'Skil 9005LA в стандартной комплектации, включает защитный кожух, боковую рукоятку, набор фланцев и ключ для установки дисков.', price: '', type: 'Угловая', power: '550 Вт', voltage: '220', launching: 'Ручной'}, {name: "Шлифовальная машина Skil 7440 LA", img: 'skil7440la', descr: 'Шлифовальная машина Skil 7440 LA используется для обработки разнофактурных поверхностей. Отличительной чертой конструкции является ее возможность крепления шлифовальных листов на липучку.', price: '108 500', type: 'Эксцентриковая', power: '850 Вт', voltage: '220', launching: 'Автоматический'}, {name: "Шлифовальная машина Bosch GWS 850 CE", img: 'boschGWS850ce', descr: 'Шлифовальная машина Bosch GWS 850 CE относится к классу профессиональных электроинструментов.', price: '', type: 'Эксцентриковая', power: '600 Вт', voltage: '220', launching: 'Автоматический'}, {name: "Болгарка Makita GA5030", img: 'makitaGA5030', descr: 'Угловая шлифовальная машина Makita GA5030 – это многофункциональный инструмент, который может применяться как для шлифовки, так и для распиловки металла.', price: '98 300', type: 'Угловая', power: '720 Вт', voltage: '220', launching: 'Ручной'}, {name: "Болгарка Skil 9005 LA", img: 'skil9005la', descr: 'Skil 9005LA в стандартной комплектации, включает защитный кожух, боковую рукоятку, набор фланцев и ключ для установки дисков.', price: '', type: 'Угловая', power: '550 Вт', voltage: '220', launching: 'Ручной'}, {name: "Болгарка Makita GA5030", img: 'makitaGA5030', descr: 'Угловая шлифовальная машина Makita GA5030 – это многофункциональный инструмент, который может применяться как для шлифовки, так и для распиловки металла.', price: '98 300', type: 'Угловая', power: '720 Вт', voltage: '220', launching: 'Ручной'}, {name: "Шлифовальная машина Skil 7440 LA", img: 'skil7440la', descr: 'Шлифовальная машина Skil 7440 LA используется для обработки разнофактурных поверхностей. Отличительной чертой конструкции является ее возможность крепления шлифовальных листов на липучку.', price: '108 500', type: 'Эксцентриковая', power: '850 Вт', voltage: '220', launching: 'Автоматический'}, {name: "Болгарка Makita GA5030", img: 'makitaGA5030', descr: 'Угловая шлифовальная машина Makita GA5030 – это многофункциональный инструмент, который может применяться как для шлифовки, так и для распиловки металла.', price: '98 300', type: 'Угловая', power: '720 Вт', voltage: '220', launching: 'Ручной'}, {name: "Шлифовальная машина Skil 7440 LA", img: 'skil7440la', descr: 'Шлифовальная машина Skil 7440 LA используется для обработки разнофактурных поверхностей. Отличительной чертой конструкции является ее возможность крепления шлифовальных листов на липучку.', price: '108 500', type: 'Эксцентриковая', power: '850 Вт', voltage: '220', launching: 'Автоматический'}, {name: "Шлифовальная машина Bosch GWS 850 CE", img: 'boschGWS850ce', descr: 'Шлифовальная машина Bosch GWS 850 CE относится к классу профессиональных электроинструментов.', price: '', type: 'Эксцентриковая', power: '600 Вт', voltage: '220', launching: 'Автоматический'}, {name: "Болгарка Makita GA5030", img: 'makitaGA5030', descr: 'Угловая шлифовальная машина Makita GA5030 – это многофункциональный инструмент, который может применяться как для шлифовки, так и для распиловки металла.', price: '98 300', type: 'Угловая', power: '720 Вт', voltage: '220', launching: 'Ручной'}, {name: "Болгарка Skil 9005 LA", img: 'skil9005la', descr: 'Skil 9005LA в стандартной комплектации, включает защитный кожух, боковую рукоятку, набор фланцев и ключ для установки дисков.', price: '', type: 'Угловая', power: '550 Вт', voltage: '220', launching: 'Ручной'}]
-        mixin product-item(product)
-          li(class="product")
-            .product__wrap
-              .product__inner
-                img(src="img/product__img--" + product.img + ".jpg", class="product__img", alt=product.name)
-                a(href="#", class="product__name")= product.name
-                if (product.descr.length > 136)
-                  - var slicedDescr = product.descr.slice(0, 133) + "..."
-                  p.product__descr= slicedDescr
+    main(role="main")
+      section.products
+        header.products__header
+          .products__menu.products__menu--hidden
+            h4.products__menu-title.products__menu-title--hidden Каталог оборудования
+            nav(class="products__nav products__nav--hidden")
+              ul.products__nav-list
+                li.products__nav-item
+                  a(href="#", class="products__nav-link") 1 уровень
+                  ul.products__nav-list-more
+                    li
+                      a(href="#") 2 уровень
+                      ul
+                        li
+                          a(href="#") 3 уровень
+                          ul
+                            li
+                              a(href="#") 4 уровень меню
+                            li
+                              a(href="#") 4 уровень меню
+                li.products__nav-item
+                  a(href="#", class="products__nav-link") 1 уровень
+                  ul.products__nav-list-more
+                    li
+                      a(href="#") 2 уровень
+                      ul
+                        li
+                          a(href="#") 3 уровень
+                        li
+                          a(href="#") 3 уровень
+                        li
+                          a(href="#") 3 уровень
+                li.products__nav-item
+                  a(href="#", class="products__nav-link") 1 уровень
+                  ul.products__nav-list-more
+                    li
+                      a(href="#") 2 уровень
+                      ul
+                        li
+                          a(href="#") 3 уровень
+                          ul
+                            li
+                              a(href="#") 4 уровень меню
+                li.products__nav-item
+                  a(href="#", class="products__nav-link") 1 уровень
+                  ul.products__nav-list-more
+                    li
+                      a(href="#") 2 уровень
+                      ul
+                        li
+                          a(href="#") 3 уровень
+                          ul
+                            li
+                              a(href="#") 4 уровень меню
+                            li
+                              a(href="#") 4 уровень меню
+                            li
+                              a(href="#") 4 уровень меню
+                li.products__nav-item
+                  a(href="#", class="products__nav-link") 1 уровень
+                  ul.products__nav-list-more
+                    li
+                      a(href="#") 2 уровень
+                    li
+                      a(href="#") 2 уровень
+                    li
+                      a(href="#") 2 уровень
+          i.products__view Change view
+        .products__wrap
+          - var productsList = [{name: "Болгарка Skil 9005 LA", img: 'skil9005la', descr: 'Skil 9005LA в стандартной комплектации, включает защитный кожух, боковую рукоятку, набор фланцев и ключ для установки дисков.', price: '', type: 'Угловая', power: '550 Вт', voltage: '220', launching: 'Ручной'}, {name: "Шлифовальная машина Skil 7440 LA", img: 'skil7440la', descr: 'Шлифовальная машина Skil 7440 LA используется для обработки разнофактурных поверхностей. Отличительной чертой конструкции является ее возможность крепления шлифовальных листов на липучку.', price: '108 500', type: 'Эксцентриковая', power: '850 Вт', voltage: '220', launching: 'Автоматический'}, {name: "Шлифовальная машина Bosch GWS 850 CE", img: 'boschGWS850ce', descr: 'Шлифовальная машина Bosch GWS 850 CE относится к классу профессиональных электроинструментов.', price: '', type: 'Эксцентриковая', power: '600 Вт', voltage: '220', launching: 'Автоматический'}, {name: "Болгарка Makita GA5030", img: 'makitaGA5030', descr: 'Угловая шлифовальная машина Makita GA5030 – это многофункциональный инструмент, который может применяться как для шлифовки, так и для распиловки металла.', price: '98 300', type: 'Угловая', power: '720 Вт', voltage: '220', launching: 'Ручной'}, {name: "Болгарка Skil 9005 LA", img: 'skil9005la', descr: 'Skil 9005LA в стандартной комплектации, включает защитный кожух, боковую рукоятку, набор фланцев и ключ для установки дисков.', price: '', type: 'Угловая', power: '550 Вт', voltage: '220', launching: 'Ручной'}, {name: "Болгарка Makita GA5030", img: 'makitaGA5030', descr: 'Угловая шлифовальная машина Makita GA5030 – это многофункциональный инструмент, который может применяться как для шлифовки, так и для распиловки металла.', price: '98 300', type: 'Угловая', power: '720 Вт', voltage: '220', launching: 'Ручной'}, {name: "Шлифовальная машина Skil 7440 LA", img: 'skil7440la', descr: 'Шлифовальная машина Skil 7440 LA используется для обработки разнофактурных поверхностей. Отличительной чертой конструкции является ее возможность крепления шлифовальных листов на липучку.', price: '108 500', type: 'Эксцентриковая', power: '850 Вт', voltage: '220', launching: 'Автоматический'}, {name: "Болгарка Makita GA5030", img: 'makitaGA5030', descr: 'Угловая шлифовальная машина Makita GA5030 – это многофункциональный инструмент, который может применяться как для шлифовки, так и для распиловки металла.', price: '98 300', type: 'Угловая', power: '720 Вт', voltage: '220', launching: 'Ручной'}, {name: "Шлифовальная машина Skil 7440 LA", img: 'skil7440la', descr: 'Шлифовальная машина Skil 7440 LA используется для обработки разнофактурных поверхностей. Отличительной чертой конструкции является ее возможность крепления шлифовальных листов на липучку.', price: '108 500', type: 'Эксцентриковая', power: '850 Вт', voltage: '220', launching: 'Автоматический'}, {name: "Шлифовальная машина Bosch GWS 850 CE", img: 'boschGWS850ce', descr: 'Шлифовальная машина Bosch GWS 850 CE относится к классу профессиональных электроинструментов.', price: '', type: 'Эксцентриковая', power: '600 Вт', voltage: '220', launching: 'Автоматический'}, {name: "Болгарка Makita GA5030", img: 'makitaGA5030', descr: 'Угловая шлифовальная машина Makita GA5030 – это многофункциональный инструмент, который может применяться как для шлифовки, так и для распиловки металла.', price: '98 300', type: 'Угловая', power: '720 Вт', voltage: '220', launching: 'Ручной'}, {name: "Болгарка Skil 9005 LA", img: 'skil9005la', descr: 'Skil 9005LA в стандартной комплектации, включает защитный кожух, боковую рукоятку, набор фланцев и ключ для установки дисков.', price: '', type: 'Угловая', power: '550 Вт', voltage: '220', launching: 'Ручной'}]
+          mixin product-item(product)
+            li(class="product")
+              .product__wrap
+                .product__inner
+                  img(src="img/product__img--" + product.img + ".jpg", class="product__img", alt=product.name)
+                  a(href="#", class="product__name")= product.name
+                  if (product.descr.length > 136)
+                    - var slicedDescr = product.descr.slice(0, 133) + "..."
+                    p.product__descr= slicedDescr
+                  else
+                    p.product__descr= product.descr
+                if product.price
+                  .product__price-cont
+                    span.product__price= product.price + ' руб.'
+                    button.product__btn.product__btn--buy В корзину
                 else
-                  p.product__descr= product.descr
-              if product.price
-                .product__price-cont
-                  span.product__price= product.price + ' руб.'
-                  button.product__btn.product__btn--buy В корзину
-              else
-                .product__price-cont.product__price-cont--request Цена по запросу
-                  button.product__btn.product__btn--request Запросить цену
-        ul.products__list
-          each product in productsList
-            +product-item(product)
-        mixin product-table-item(product)
-          tr
-            td.product__table-cell.product__table-cell--name
-              img(src="img/product__img--" + product.img + ".jpg", class="product__img product__img--table", alt=product.name)
-              a(href="#", class="product__name product__name--table")= product.name
-            td.product__table-cell.product__table-cell--type
-              span.product__value= product.type
-            td.product__table-cell.product__table-cell--power
-              span.product__value= product.power
-            td.product__table-cell
-              span.product__value= product.voltage
-            td.product__table-cell
-              span.product__value= product.launching
-            td.product__table-cell.product__table-cell--price
-              if product.price
-                span(class="product__price product__price--table")= product.price + ' руб.'
-              else
-                .product__price-request Цена по запросу
-        table(class="products__table", style="display: none")
-          thead
-            tr
-              th.products__option.products__option--name Модель
-              th.products__option.products__option--type Тип
-              th.products__option.products__option--power Мощность
-              th.products__option Напряжение
-              th.products__option Тип запуска
-              th.products__option.products__option--price Цена
-          tbody
+                  .product__price-cont.product__price-cont--request Цена по запросу
+                    button.product__btn.product__btn--request Запросить цену
+          ul.products__list
             each product in productsList
-              +product-table-item(product)
+              +product-item(product)
+          mixin product-table-item(product)
+            tr
+              td.product__table-cell.product__table-cell--name
+                img(src="img/product__img--" + product.img + ".jpg", class="product__img product__img--table", alt=product.name)
+                a(href="#", class="product__name product__name--table")= product.name
+              td.product__table-cell.product__table-cell--type
+                span.product__value= product.type
+              td.product__table-cell.product__table-cell--power
+                span.product__value= product.power
+              td.product__table-cell
+                span.product__value= product.voltage
+              td.product__table-cell
+                span.product__value= product.launching
+              td.product__table-cell.product__table-cell--price
+                if product.price
+                  span(class="product__price product__price--table")= product.price + ' руб.'
+                else
+                  .product__price-request Цена по запросу
+          table(class="products__table", style="display: none")
+            thead
+              tr
+                th.products__option.products__option--name Модель
+                th.products__option.products__option--type Тип
+                th.products__option.products__option--power Мощность
+                th.products__option Напряжение
+                th.products__option Тип запуска
+                th.products__option.products__option--price Цена
+            tbody
+              each product in productsList
+                +product-table-item(product)
   script(src="js/script.min.js")
